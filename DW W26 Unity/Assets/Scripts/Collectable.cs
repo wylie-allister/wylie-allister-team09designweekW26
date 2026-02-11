@@ -4,8 +4,8 @@ using UnityEngine.Rendering;
 public class Collectable : MonoBehaviour
 {
 
-    [SerializeField]
-    public int collectScore = 0;
+
+    public CarrotPile carrotP;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,11 +20,11 @@ public class Collectable : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && carrotP.collectScore <= 2)
         {
             Debug.Log("Ping");
             Destroy(gameObject);
-            collectScore++;
+            carrotP.collectScore++;
         }
     }
 }
