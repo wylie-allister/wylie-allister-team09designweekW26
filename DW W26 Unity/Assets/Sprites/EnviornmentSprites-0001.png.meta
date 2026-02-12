@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 38a9ffeabf81ee24fb90ed7e5946ef4a
+guid: 8e292bbea37eb9d48892bdea299c6960
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6998272568974275570
-    second: Rabbit-Skull-Sprite_0
+      213: 297073007662872130
+    second: EnviornmentSprites-0001_0
+  - first:
+      213: 1299300449348081396
+    second: EnviornmentSprites-0001_1
+  - first:
+      213: 353799606120000465
+    second: EnviornmentSprites-0001_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rabbit-Skull-Sprite_0
+      name: EnviornmentSprites-0001_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 27
-        height: 30
+        x: 12
+        y: 7
+        width: 33
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f37213b2dbde1160800000000000000
-      internalID: 6998272568974275570
+      spriteID: 2463a16935a6f1400800000000000000
+      internalID: 297073007662872130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnviornmentSprites-0001_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 7
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f6d5ebefda080210800000000000000
+      internalID: 1299300449348081396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnviornmentSprites-0001_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 9
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dba4740ed2f8e400800000000000000
+      internalID: 353799606120000465
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rabbit-Skull-Sprite_0: 6998272568974275570
+      EnviornmentSprites-0001_0: 297073007662872130
+      EnviornmentSprites-0001_1: 1299300449348081396
+      EnviornmentSprites-0001_2: 353799606120000465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
