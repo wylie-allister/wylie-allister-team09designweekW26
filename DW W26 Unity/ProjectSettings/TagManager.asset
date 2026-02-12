@@ -51,11 +51,14 @@ TagManager:
   - name: Walls
     uniqueID: 3681635201
     locked: 0
-  - name: Burrow
+  - name: BurrowMap
     uniqueID: 1639181483
     locked: 0
-  - name: Surface
+  - name: SurfaceMap
     uniqueID: 2918244545
+    locked: 0
+  - name: Burrow
+    uniqueID: 358894073
     locked: 0
   - name: Players
     uniqueID: 971107229
