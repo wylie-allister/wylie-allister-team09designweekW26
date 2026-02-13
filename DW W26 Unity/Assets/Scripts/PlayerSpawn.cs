@@ -18,6 +18,10 @@ public class PlayerSpawn : MonoBehaviour
     private int nextBunnySpawn = 0;
     private int nextFoxSpawn = 2;
     ///////////////////////////////////////////////
+    /// <summary>
+    /// </summary>
+    /// <param name="playerInput"></param>
+    /// 
 
     // This function is automatically called by PlayerInputManager whenever a new player joins the game
     public void OnPlayerJoined(PlayerInput playerInput)

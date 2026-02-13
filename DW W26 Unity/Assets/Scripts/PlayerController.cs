@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class PlayerController : MonoBehaviour
 {
@@ -61,7 +62,6 @@ public class PlayerController : MonoBehaviour
 
     // Speed of the dash
     private float dashSpeed;
-
     private void Awake()
     {
         // Get the playable component (Rabbit or Fox)
@@ -117,6 +117,7 @@ public class PlayerController : MonoBehaviour
         if (inputActionMove != null)
         {
             moveInput = inputActionMove.ReadValue<Vector2>();
+
 
             // If player is actually moving then update the last direction
             if (moveInput.sqrMagnitude > 0.01f)
@@ -195,5 +196,4 @@ public class PlayerController : MonoBehaviour
             SpriteRenderer = GetComponent<SpriteRenderer>();
         }
     }
-
 }
