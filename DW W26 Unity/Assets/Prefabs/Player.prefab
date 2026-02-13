@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4590356619657130522}
   - component: {fileID: 9047247534718786018}
   - component: {fileID: 6022286129245166425}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: UI-lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9b8ffd0024cd04087164b5321ac9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  role: 0
+  role: 1
 --- !u!114 &-1938481882032988856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
   attackCooldown: 1
   playerLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 257
   stunSeconds: 1
   carrotDropPrefab: {fileID: 6066726785278065458, guid: e39f2214f964c2a4e85214842a0937f2, type: 3}
   dropScatterRadius: 0.35
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 5964057927775276163}
   - component: {fileID: 7810331216309324944}
   - component: {fileID: 704240836224015589}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Life Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,11 +801,11 @@ PrefabInstance:
       objectReference: {fileID: 6621985761858004223}
     - target: {fileID: 5311334333014682559, guid: 5593f329715b2c549b3321b27a00709f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5650437024342621788, guid: 5593f329715b2c549b3321b27a00709f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8633532760447581501, guid: 5593f329715b2c549b3321b27a00709f, type: 3}
       propertyPath: m_Name
@@ -813,7 +813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8633532760447581501, guid: 5593f329715b2c549b3321b27a00709f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9179483094883253694, guid: 5593f329715b2c549b3321b27a00709f, type: 3}
       propertyPath: m_Color.a
