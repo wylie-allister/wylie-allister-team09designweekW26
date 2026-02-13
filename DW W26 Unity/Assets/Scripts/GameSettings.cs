@@ -14,12 +14,19 @@ public class GameSettings : MonoBehaviour
 
     private void Awake()
     {
-        // Set this as a global instance 
+        // Set this as a global instance
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
-        
+
         // This makes sure GameSettings survives when we change scenes
         DontDestroyOnLoad(gameObject);
     }
+
 
     // This saves or updates the team choice for a player if it already exists in the dictionary then it just overwrites their intial team
     public void SetTeam(int playerIndex, Team team)

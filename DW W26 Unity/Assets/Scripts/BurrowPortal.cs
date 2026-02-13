@@ -10,7 +10,6 @@ public class BurrowPortal : MonoBehaviour
     [Header("Where This Burrow Will Send Player")]
     public Transform destination;
 
-
     [Header("Rules")]
     // If true only rabbits can use this portal
     public bool rabbitsOnly = true;
@@ -25,50 +24,40 @@ public class BurrowPortal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // If its not tagged "Player" then ignore it
-        if (!other.CompareTag("Player"))
-        {
+        if (!other.CompareTag("Player")) 
             return;
-        }
 
         // Get the PlayerRole component from whoever touched the portal
-        PlayerRole role = other.GetComponent<PlayerRole>();
-      
-        // If portal only allows rabbits and this is not a rabbit then stop
-        if (rabbitsOnly && role.role != PlayerRole.Role.Rabbit)
-        {
+        var role = other.GetComponent<PlayerRole>();
+        if (role == null) 
             return;
-        }
+
+        // If portal only allows rabbits and this is not a rabbit then stop
+        if (rabbitsOnly && role.role != PlayerRole.Role.Rabbit) 
+            return;
+
+        if (destination == null) return;
 
         // Get or make the BurrowTravelState component on this player
-        BurrowTravelState travel = other.GetComponent<BurrowTravelState>();
+        var travel = other.GetComponent<BurrowTravelState>();
+
+        if (travel == null) travel = other.gameObject.AddComponent<BurrowTravelState>();
 
         // cooldown check
-        if (!travel.CanUseBurrow(globalCooldownSeconds))
-        {
+        if (!travel.CanUseBurrow(globalCooldownSeconds)) 
             return;
-        }
 
         // same-portal check
-        if (blockSamePortal && travel.lastPortalId == portalId)
-        {
+        if (blockSamePortal && travel.lastPortalId == portalId) 
             return;
-        }
-
-        if (destination == null)
-        {
-            return;
-        }
 
         // Teleport
-        Transform t = other.transform;
-        t.position = destination.position;
+        other.transform.position = destination.position;
 
         // Stop carry-over movement
-        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
+        var rb = other.GetComponent<Rigidbody2D>();
+
+        if (rb != null) rb.linearVelocity = Vector2.zero;
 
         // Record use
         travel.RecordUse(portalId);

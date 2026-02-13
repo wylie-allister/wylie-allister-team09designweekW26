@@ -166,9 +166,22 @@ public class PlayerController : MonoBehaviour
         {
             desired = desired.normalized;
         }
-           
+
         // Apply walking velocity
-        Rigidbody2D.linearVelocity = desired * MoveSpeed;
+        float speedMultiplier = 1f;
+
+        // Only bunnies slow down when carrying
+        if (playerRole != null && playerRole.role == PlayerRole.Role.Rabbit)
+        {
+            var inv = GetComponent<PlayerInventory>();
+            if (inv != null)
+            {
+                speedMultiplier = inv.GetMoveSpeedMultiplier();
+            }
+        }
+
+        Rigidbody2D.linearVelocity = desired * (MoveSpeed * speedMultiplier);
+
     }
 
     // The Dash input action

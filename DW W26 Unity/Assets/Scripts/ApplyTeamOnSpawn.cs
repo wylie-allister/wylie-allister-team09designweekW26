@@ -23,32 +23,32 @@ public class ApplyTeamOnSpawn : MonoBehaviour
         // Every joining player has a playerIndex
         int index = input.playerIndex;
 
+        // Default
+        var team = GameSettings.Team.Bunny;
+
         // Check GameSettings to see what team this player picked 
-        if (!GameSettings.Instance.teamByPlayerIndex.TryGetValue(index, out var team))
+        if (GameSettings.Instance != null)
         {
-            team = GameSettings.Team.Bunny;
+            GameSettings.Instance.teamByPlayerIndex.TryGetValue(index, out team);
+        }
+        else
+        {
+            Debug.LogWarning("GameSettings.Instance is NULL (loading gameplay without team select?). Defaulting to Bunny.");
         }
 
         // Set the PlayerRole script so the game knows whether or not this player is a Rabbit or a Fox
         if (playerRole != null)
-        {
             playerRole.role = (team == GameSettings.Team.Bunny) ? PlayerRole.Role.Rabbit : PlayerRole.Role.Fox;
-        }
-          
+
         // Change the sprite so the character matches what they picked
         if (spriteRenderer != null)
         {
             // If player picked bunny, apply bunny sprite
-            if (team == GameSettings.Team.Bunny && bunnySprite != null)
-            {
-                spriteRenderer.sprite = bunnySprite;
-            }
+            if (team == GameSettings.Team.Bunny && bunnySprite != null) spriteRenderer.sprite = bunnySprite;
 
             // If player picked fox, apply fox sprite
-            if (team == GameSettings.Team.Fox && foxSprite != null)
-            {
-                spriteRenderer.sprite = foxSprite;
-            }
+            if (team == GameSettings.Team.Fox && foxSprite != null) spriteRenderer.sprite = foxSprite;
         }
     }
+
 }

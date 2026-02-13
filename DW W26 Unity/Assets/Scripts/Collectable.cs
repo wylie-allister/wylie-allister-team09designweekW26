@@ -1,30 +1,27 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class Collectable : MonoBehaviour
 {
-    public PlayerRole pr;
+    [SerializeField] private int value = 1;
 
-    public CarrotPile carrotP;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
+        if (!other.CompareTag("Player")) return;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        var role = other.GetComponent<PlayerRole>();
+        if (role == null || role.role != PlayerRole.Role.Rabbit) return;
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (pr.role == PlayerRole.Role.Rabbit && carrotP.collectScore <= 2)
+        var inv = other.GetComponent<PlayerInventory>();
+        if (inv == null) inv = other.gameObject.AddComponent<PlayerInventory>();
+
+        // max carry check 2 
+        if (!inv.CanPickup(value))
         {
-            Debug.Log("Ping");
-            Destroy(gameObject);
-            carrotP.collectScore++;
+            Debug.Log($"{other.name} inventory full. Can't pick up more.");
+            return;
         }
+
+        inv.AddCarrot(value);
+        Destroy(gameObject);
     }
 }

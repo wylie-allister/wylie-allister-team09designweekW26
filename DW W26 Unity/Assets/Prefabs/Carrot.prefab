@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 507263548095035524}
   m_Layer: 0
   m_Name: Carrot
-  m_TagString: Untagged
+  m_TagString: Carrot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fb9517b66af124ca4b4af132a47094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carrotP: {fileID: 0}
+  value: 1
 --- !u!61 &507263548095035524
 BoxCollider2D:
   m_ObjectHideFlags: 0
