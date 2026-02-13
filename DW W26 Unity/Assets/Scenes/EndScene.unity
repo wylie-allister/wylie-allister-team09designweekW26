@@ -690,7 +690,6 @@ GameObject:
   - component: {fileID: 1011104914}
   - component: {fileID: 1011104913}
   - component: {fileID: 1011104912}
-  - component: {fileID: 1011104915}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -761,7 +760,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1011104913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 940675744}
+        m_TargetAssemblyTypeName: EndScreenUI, Assembly-CSharp
+        m_MethodName: BackToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1011104913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,21 +811,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011104910}
   m_CullTransparentMesh: 1
---- !u!114 &1011104915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011104910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d4aaf1e9e626944888031682849674d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: {fileID: 1419941733}
-  gameplaySceneName: Dual Monitor Scene
-  menuSceneName: Team Select
 --- !u!1 &1142138619
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +960,6 @@ GameObject:
   - component: {fileID: 1367908220}
   - component: {fileID: 1367908219}
   - component: {fileID: 1367908218}
-  - component: {fileID: 1367908221}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -1035,7 +1030,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1367908219}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 940675744}
+        m_TargetAssemblyTypeName: EndScreenUI, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1367908219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,21 +1081,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367908216}
   m_CullTransparentMesh: 1
---- !u!114 &1367908221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367908216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d4aaf1e9e626944888031682849674d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: {fileID: 415723221}
-  gameplaySceneName: Dual Monitor Scene
-  menuSceneName: Team Select
 --- !u!1 &1419941731
 GameObject:
   m_ObjectHideFlags: 0
