@@ -47,5 +47,8 @@ public class SetTimers : MonoBehaviour
         {
             text += remaining % 60;
         }
+
+        textBurrow.text = text;
+        textField.text = text;
     }
 }
