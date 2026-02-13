@@ -195,4 +195,5 @@ public class PlayerController : MonoBehaviour
             SpriteRenderer = GetComponent<SpriteRenderer>();
         }
     }
+
 }
