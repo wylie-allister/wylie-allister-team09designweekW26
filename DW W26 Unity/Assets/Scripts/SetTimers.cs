@@ -1,17 +1,18 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SetTimers : MonoBehaviour
 {
     public Canvas canvas;
-    public Text textBurrow;
-    public Text textField;
+    public TextMeshProUGUI textBurrow;
+    public TextMeshProUGUI textField;
     
     void Start()
     {
         // hi i'm maddy and you're watching my 3am descent into madness. i'm not commenting this
         canvas = GetComponent<Canvas>();
-        Text[] text = canvas.GetComponentsInChildren<Text>();
+        TextMeshProUGUI[] text = canvas.GetComponentsInChildren<TextMeshProUGUI>();
         for (int i = 0; i < text.Length; i++)
         {
             if (text[i].gameObject.name == "BurrowTimer")
@@ -47,6 +48,8 @@ public class SetTimers : MonoBehaviour
         {
             text += remaining % 60;
         }
+
+        Debug.Log(text);
 
         textBurrow.text = text;
         textField.text = text;

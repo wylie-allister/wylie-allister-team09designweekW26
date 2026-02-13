@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     [Header("State")]
     public bool gameEnded;
 
-    SetTimers timers;
+    [SerializeField] SetTimers timers;
 
     private void Awake()
     {
@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
             FoxWin();
         }
 
-        // timers.SetTimersText(timeRemaining); // hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+        timers.SetTimersText(timeRemaining); // hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     }
 
     // ----------------------------
