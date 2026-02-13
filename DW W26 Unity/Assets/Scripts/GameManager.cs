@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
             FoxWin();
         }
 
-        timers.SetTimersText(timeRemaining); // hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+        // timers.SetTimersText(timeRemaining); // hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     }
 
     // ----------------------------

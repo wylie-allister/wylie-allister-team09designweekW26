@@ -30,6 +30,7 @@ public class EditUIDashCD : MonoBehaviour
 
     public void setCooldownProgress(float lastDash, float nextDash)
     {
+        Debug.Log("ODhnajofb");
         // update the overlay circle's fill amount to represent 0 fill when the dash was activated and 1 when the next dash is available
         overlay.fillAmount = (Time.time - lastDash) / (nextDash - lastDash);
 
